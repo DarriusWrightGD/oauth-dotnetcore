@@ -22,6 +22,7 @@ namespace SocialNetwork.OAuth
                 .AddSigningCredential(new X509Certificate2(@"C:\Users\darri\Documents\Code\dotnet-core\oauth\src\SocialNetwork.OAuth\certs\socialnetwork.pfx", "password"))
                 .AddTestUsers(InMemoryConfiguration.Users.ToList())
                 .AddInMemoryClients(InMemoryConfiguration.Clients)
+                .AddInMemoryIdentityResources(InMemoryConfiguration.IdentityResources)
                 .AddInMemoryApiResources(InMemoryConfiguration.ApiResources);
             services.AddMvc();
         }

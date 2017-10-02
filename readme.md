@@ -150,3 +150,10 @@ Installing everything on windows is extremely cumbersome to generate certificati
 docker build -t openssl .
 docker run -e CERT_NAME=${name} -v ${volume_location}:/certs openssl
 ```
+
+
+## Refresh Token
+
+This is used to refresh your access token, this allows your users to operate offline etc. The refresh 
+token has a certain lifespan and only can be used once. After it has been used you will recieve another 
+refresh token, and regenerated access token.
